@@ -8,6 +8,7 @@
     width: 600px;
     font-size: 65px;
 }
+
 .Ocupação {
     color: rgb(255, 87, 87);
     letter-spacing: 2px;
@@ -21,7 +22,7 @@
     color: rgb(23, 15, 42)
 }
 
-.backgroundLeft {
+#backgroundLeft {
     background-color: rgb(23, 15, 42);
 }
 .rodapé {
