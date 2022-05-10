@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta tags -->
+	<meta charset="UTF-8" />
+
+	<!-- Título -->
+	<title>Etapa 4</title>
+
+	<!-- Estilos -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<script src="script.js"></script>
+	<div id="main">
+		<h1>ETAPA 4</h1>
+		Introdução a Jquery
+		<div id="calc" class="sections">
+			<h3>PARTE 1 - Cálculos</h3>
+			Cálculos realizados e respectivos resultados obtidos:
+		</div>
+		<div>
+			<button onclick="CalcAddAndShow(10,50)" class="button-calc">Calcular 10+50</button>
+			<button onclick="MultAddAndShow(3, 7)" class="button-calc">Multiplicar 3 e 7</button>
+			<button onclick="PotAddAndShow(2,9)" class="button-calc">Elevar 2 a 9</button>
+			<button onclick="DivAddAndShow(7,3)" class="button-calc">Dividir 7 por 3</button>
+		</div>
+		<br />
+		<div>
+			<!-- <button onclick="SayTruth('Alexandre')" class="button-truth">Dizer a Verdade</button>
+			<button onclick="SayTruth('Vitoria')" class="button-truth">Dizer outra Verdade</button>
+			<button onclick="SayTruth('Vinicius')" class="button-truth">Dizer mais uma Verdade</button>
+			<button onclick="SayTruth('Kil')" class="button-truth">Dizer uma última Verdade</button>
+			<button onclick="SayTruth('Zaidan')" class="button-truth">Dizer a verdade verdadeira</button> -->
+			<div>
+				<br />
+			</div>
+			<div style="background-color:black; color:greenyellow">
+				<h3>PARTE 2 - Verdades</h3>
+				<label>Verdade:<input type="text" name="verdade" id="verdade" size="30"
+						placeholder="Digite quem é a verdade aqui"><br /></label> <br />
+				<button onclick="SayTruth('verdade')" class="button-truth">A verdade</button>
+			</div>
+			<div id="truth" class="sections">
+				<p>As verdades verdadeiras mais reais que existem:</p>
+			</div>
+			<br />
+			<br />
+			<label>Valor 1:<input type="text" id="valor1" size="30" placeholder="Digite o primeiro valor"><br /></label>
+			<label>Valor 2:<input type="text" id="valor2" size="30" placeholder="Digite o segundo valor"><br /></label>
+			<input type="submit" name="submit" id="submit" value="Calcular"
+				onclick="CalcAddAndShow('valor1', 'valor2')">
+
+		</div>
+</body>
+
+</html>

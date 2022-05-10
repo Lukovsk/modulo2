@@ -5,9 +5,8 @@ var calcResDiv = "calc";
 
 
 //
-function calcular(velocidadeInicial) {
+function calcular() {
     velocidadeInicial = Number(document.getElementById("velocidadeInicial").value);
-    console.log(velocidadeInicial);
     var alturaMaxima = (velocidadeInicial ** 2) / (2 * gravidade);
     var tempoSubida = (velocidadeInicial) / (gravidade);
     ShowResult(alturaMaxima, tempoSubida, velocidadeInicial);
