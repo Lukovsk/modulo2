@@ -102,7 +102,6 @@ function Calc(x, y, op) {
 /* Função que mostra a operação realizada */
 function ShowOp(x, y, op) {
     $(calcResDiv).append(`<br />${x} ${op} ${y} = `);
-    // Alternativa: .. += "<br />" + x + " " + op + " " + y + " = "
 }
 
 
