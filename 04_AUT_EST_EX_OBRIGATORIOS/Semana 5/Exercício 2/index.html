@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+
+    <!-- Título -->
+    <title>Exercício 2</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<!-- Enunciado:Crie uma página web que permita ao usuário informar o preço de um produto e, quando o usuário indicar que deseja que o cálculo seja realizado (pressionar um botão), apresente quais notas e quantas notas são necessárias para efetuar o pagamento da compra desse produto. Considere notas para os valores 1, 2, 5, 10, 20, 50, 100 e que é desejável efetuar o pagamento com a menor quantidade possível de notas. -->
+
+
+<body>
+    <script src="script.js"></script>
+    <div id="main">
+        <h1>Exercício 2</h1>
+        <h2>Informe o preço do produto</h2>
+        <br />
+        <div>
+            <input type="number" id="valorDinheiro">
+
+            <br><br>
+
+        </div>
+
+        <div>
+            <button onclick="Calculate()" class="button-calc"> Calcular </button>
+        </div>
+        <div id="calc">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

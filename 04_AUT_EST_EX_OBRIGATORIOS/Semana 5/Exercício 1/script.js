@@ -4,7 +4,7 @@ Declaração de variáveis
 =======================
 */
 
-var calcResDiv = "#calc";
+var calcResDiv = "#calc"; // variável que recebe o id da div que receberá o valor da operação
 
 /* 
 =======================
@@ -12,7 +12,7 @@ Funções
 ======================= 
 */
 
-/* Função que calcula uma soma e mostra a operação realizada e o resultado obtido */
+/* Função que recebe o valor da operação e os valores dos números em questão e executa as funções para calcular e mostrar as operações */
 function Calculate() {
     var select = document.getElementById('operador');
     var op = select.options[select.selectedIndex].value;
@@ -26,7 +26,6 @@ function Calculate() {
     ShowOp(x, y, op);
     ShowResult(result);
 };
-
 
 /* Função que calcula uma operação entre dois números recebidos como parâmetro */
 function Calc(x, y, op) {
@@ -52,13 +51,11 @@ function Calc(x, y, op) {
     return result;
 }
 
-
+// Essas funções mostram o resultado abaixo do botão, onde está a div cujo id é "calc"
 /* Função que mostra a operação realizada */
 function ShowOp(x, y, op) {
     $(calcResDiv).append(`<br />${x} ${op} ${y} = `);
-    // Alternativa: .. += "<br />" + x + " " + op + " " + y + " = "
 }
-
 
 /* Função que mostra o resultado obtido */
 function ShowResult(res) {
