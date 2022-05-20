@@ -22,6 +22,7 @@ function Calculate() {
 
 /* Função que calcula a quantidade de cada nota */
 function Calc(price) {
+    debugger
     var cem = 0;
     var cinquenta = 0;
     var vinte = 0;
