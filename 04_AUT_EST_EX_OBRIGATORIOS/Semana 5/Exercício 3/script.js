@@ -28,22 +28,20 @@ function sortItems(array) {
 
 
 
-// função que procura 
+// função que procura o valor-foco com o algoritmo de busca binária
 function buscaBinaria(list) { // [1, 2, 3, 8]
     debugger
     var min = 0; // min = 0
-    console.log(list);
     var tamanho = 0;
+    
     for (let key in list) {
         if (list.hasOwnProperty(key)) {
             tamanho++;
         }
 
     }
-    console.log(tamanho);
-    console.log(Object.keys(list).lenght);
+
     var max = tamanho; // max = 5-1 = 4
-    console.log(max);
     var chute = Math.floor((max + min) / 2); // chute = 2
     var foco = Number(document.getElementById("focusValue").value); // 8, por exemplo
 
