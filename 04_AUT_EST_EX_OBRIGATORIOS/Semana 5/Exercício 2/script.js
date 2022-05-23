@@ -4,7 +4,7 @@ Declaração de variáveis
 =======================
 */
 
-var calcResDiv = "calc";
+var calcResDiv = "calc"; // div que vai receber as contas
 
 /* 
 =======================
@@ -16,13 +16,14 @@ Funções
 function Calculate() {
     var price = Number(document.getElementById('valorDinheiro').value);
 
-    ShowResult(Calc(price));
+    ShowResult(Calc(price)); // chama a função que vai mostrar o que retornar da função Calc()
     // ShowResult(cem, cinquenta, vinte, dez, cinco, dois, um);
 };
 
-/* Função que calcula a quantidade de cada nota */
+/* Função que calcula a quantidade de cada nota e retorna uma string com cada um dos valores */
 function Calc(price) {
     debugger
+    // cada variável aqui significa "quantidade dessa nota"
     var cem = 0;
     var cinquenta = 0;
     var vinte = 0;
@@ -31,6 +32,8 @@ function Calc(price) {
     var dois = 0;
     var um = 0;
 
+    // a função roda TODOS os if's
+    // ao longo desses if's, ele identifica a quantidade de uma nota que é necessária para formar o valor informado (por meio da divisão) e retira essa quantidade do valor original para se atualizar ao longo da função 
     if (price >= 100) {
         cem = Math.floor(price / 100);
         price = price - cem * 100;
@@ -60,6 +63,7 @@ function Calc(price) {
         price = price - um * 1;
     };
 
+    // como não consegui retornar todos em um array e utilizar esse array pra formar um texto e mostrar na página, já fiz a função retornar essa string diretão
     return [`${um} notas de um <br /> ${dois} notas de dois <br /> ${cinco} notas de cinco <br /> ${dez} notas de dez <br /> ${vinte} notas de vinte <br /> ${cinquenta} notas de cinquenta e <br /> ${cem} notas de cem`];
 };
 

@@ -1,5 +1,5 @@
 // Declaração de variáveis
-var kokoro = "kokoro";
+var kokoro = "#kokoro";
 var adicionarFormacaoAcademica = "adicionarInteli";
 
 // Função que vai registrar uma formação acadêmica no currículo
@@ -17,8 +17,10 @@ function addFormacaoAcademica(Experiencia, Instituicao, Periodo) {
 
 }
 
-// Função que cria um coração no meu nome
+
+// Função que cria muitos corações no meu nome
 function criar(coracao) {
-    document.getElementById(kokoro).innerHTML = `<br/> 
-    <p style="font-size: 100px"> ${coracao} </p>`;
+    $(kokoro).append(`<br/> <p style="font-size: 100px"> ${coracao} </p>`);
+
+    // document.getElementById(kokoro).innerHTML = `<br/> <p style="font-size: 100px"> ${coracao} </p>`;
 };
