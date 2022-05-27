@@ -34,7 +34,7 @@ app.post('/userinsert', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  sql = "INSERT INTO tbUser (title, id, completed) VALUES ('" + req.body.title + "', 33, false)";
+  sql = "INSERT INTO tbUser (title, id, completed) VALUES ('" + req.body.title + "', '" + req.body.identity + "', false)";
   var db = new sqlite3.Database(DBPATH);
   db.run(sql, [], err => {
     if (err) {
