@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+
+    <!-- Título -->
+    <title>Exercício 1</title>
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<!-- Enunciado: Crie uma página web na qual o usuário possa informar a quantidade de um produto em um valor inteiro e, por meio de dois botões, um que adiciona uma unidade e um que subtraia uma unidade, o valor do campo da quantidade possa ser manipulado. -->
+
+<!-- Ou seja: input de quantidade e dois botões que mexem nessa quantidade -->
+
+<body>
+    <script src="script.js"></script>
+    <div id="main">
+        <h1>Exercício 1</h1>
+        <h2>Digite dois números e escolha uma operação</h2>
+        <br />
+        <div>
+            <input type="number" id="quantidade" value="0">
+            <br><br>
+
+        </div>
+
+        <div>
+            <button onclick="Calculate('+')" class="button-calc"> Adicionar 1 </button>
+        </div>
+        <div>
+            <button onclick="Calculate('-')" class="button-calc"> Diminuir 1 </button>
+        </div>
+        <div id="calc">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
