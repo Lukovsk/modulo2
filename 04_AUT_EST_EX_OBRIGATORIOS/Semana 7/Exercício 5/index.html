@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+
+    <!-- Título -->
+    <title>Exercício 4</title>
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<!-- Enunciado: Crie uma página web na qual o usuário informe a quantidade de alunos e a nota de cada aluno na prova e no trabalho. Quando o ususário finalizar o fornecimento de todas as informações e solicitar o cálculo, mostre:
+
+a média de cada aluno, calculada considerando peso 2 para a prova e 3 para o trabalho;
+a média geral, considerando todos os alunos;
+a média artiméticas das notas de prova;
+a média artiméticas das notas de trabalho;
+a menor e a maior notas de prova;
+a menor e a maior notas de trabalho. Obs: note que a quantidade de campos para inserção das notas de cada aluno depende da quantidade de alunos informada. -->
+
+<!-- Ou seja: input da quantidade (inteiro) e select com option noturno e diurno -->
+
+<body>
+    <script src="script.js"></script>
+    <div id="main">
+        <h1>Exercício 5</h1>
+        <h2>Digite a quantidade de alunos e depois preencha as notas deles</h2>
+        <br />
+        <div>
+            
+            <input type="number" id="quantidadeAlunos">
+            <button onclick="CriarAlunos()" class="button-calc"> Mostrar alunos </button>
+
+        </div>
+
+        <div id="listaAlunos">
+        </div>
+
+        <div id="calc">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
