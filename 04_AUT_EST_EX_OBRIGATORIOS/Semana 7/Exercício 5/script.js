@@ -3,7 +3,6 @@
 Funções
 ======================= 
 */
-var calc = "#calc";
 
 function CriarAlunos() {
     debugger
@@ -16,8 +15,6 @@ function CriarAlunos() {
     document.getElementById("listaAlunos").innerHTML += `<br /> <br /> <button onclick="Calculate()" class="button-calc"> Mostrar Médias </button>`;
 }
 
-// a menor e a maior notas de prova;
-// a menor e a maior notas de trabalho.
 
 function Calculate() {
     debugger
@@ -26,6 +23,11 @@ function Calculate() {
     var numeradorMedia = 0;
     var numeradorMediaProvas = 0;
     var numeradorMediaTrabalhos = 0;
+    var maiorNotaProva = 0;
+    var maiorNotaTrabalho = 0;
+    var alunoMaiorNotaTrabalho = 0;
+    var alunoMaiorNotaProva = 0;
+
     while (k < quantidadeAlunos) {
         idnotaProva = String("notaProva" + String(k + 1));
         prova = Number(document.getElementById(idnotaProva).value);
@@ -37,7 +39,16 @@ function Calculate() {
         numeradorMediaProvas += prova;
         numeradorMediaTrabalhos += trabalho;
 
-        document.getElementById("listaMédias").innerHTML += `<br /> <label> Aluno ${k + 1}: Média <span id="media${k + 1}"> ${media} </span> </label>`
+        if (maiorNotaProva < prova) {
+            maiorNotaProva = prova;
+            alunoMaiorNotaProva = k + 1;
+        };
+        if (maiorNotaTrabalho < trabalho) {
+            maiorNotaTrabalho = trabalho;
+            alunoMaiorNotaTrabalho = k + 1;
+        };
+
+        document.getElementById("listaMédias").innerHTML += `<br /> <label> Aluno ${k + 1}: Média <span id="media${k + 1}"> ${media} </span> </label>`;
 
         k++
     }
@@ -47,11 +58,13 @@ function Calculate() {
     document.getElementById("outrasMédias").innerHTML += `<br /> A média geral da turma foi ${mediaGeral}`;
 
     // a média artiméticas das notas de prova;
+    // a menor e a maior notas de prova.
     mediaProvas = numeradorMediaProvas / (k + 1);
-    document.getElementById("outrasMédias").innerHTML += `<br /> A média das notas das provas foi ${mediaProvas}`;
+    document.getElementById("outrasMédias").innerHTML += `<br /> A média das notas das provas foi ${mediaProvas} e a maior nota foi ${maiorNotaProva} do aluno ${alunoMaiorNotaProva}`;
 
     // a média artiméticas das notas de trabalho;
+    // a menor e a maior notas de trabalho.
     mediaTrabalho = numeradorMediaTrabalhos / (k + 1);
-    document.getElementById("outrasMédias").innerHTML += `<br /> A média das notas dos trabalhos foi ${mediaTrabalho}`;
+    document.getElementById("outrasMédias").innerHTML += `<br /> A média das notas dos trabalhos foi ${mediaTrabalho} e a maior nota foi ${maiorNotaTrabalho} do aluno ${alunoMaiorNotaTrabalho}`;
 
 };
