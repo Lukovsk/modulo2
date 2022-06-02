@@ -34,16 +34,16 @@ Um exercício sobre lançamento vertical para descobrir a altura máxima e o tem
 
 <a href="https://github.com/Lukovsk/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%205"> 18/05/2022 - Semana 5 </a> <br />
 <ul>Três exercícios de javascript que envolvem:
-    <ol> execução de contas básicas entre dois números; </li>
-    <ol> contagem de notas para determinado preço e </li> 
-    <ol> busca binária em uma lista ordenada. </li>
+    <li> execução de contas básicas entre dois números; </li>
+    <li> contagem de notas para determinado preço e </li> 
+    <li> busca binária em uma lista ordenada. </li>
 </ul>
 
 <a href="https://github.com/Lukovsk/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%207"> 03/06/2022 - Semana 7 </a> <br />
 <ul> Cinco exercícios de javascript que envolvem:
-    <ol> adição diretamente no valor do input com dois botões; </ol>
-    <ol> troca de valores em dois input's; </ol>
-    <ol> padronização de uma célula input com número de telefone (XX)XXXXX-XXXX; </ol>
-    <ol> vários if's para calcular a receita de uma venda de bilhetes de avião com condições e</ol>
-    <ol> criação de uma quantidade de alunos e o cálculo de suas médias. </ol>
+    <li> adição diretamente no valor do input com dois botões; </li>
+    <li> troca de valores em dois input's; </li>
+    <li> padronização de uma célula input com número de telefone (XX)XXXXX-XXXX; </li>
+    <li> vários if's para calcular a receita de uma venda de bilhetes de avião com condições e</li>
+    <li> criação de uma quantidade de alunos e o cálculo de suas médias. </li>
 </ul>
