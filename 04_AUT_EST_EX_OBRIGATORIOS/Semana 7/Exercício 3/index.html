@@ -25,14 +25,13 @@
         <h1>Exercício 3</h1>
         <h2>Digite o número do seu celular</h2>
         <br />
-        <div>
-            <input type="text" oninput="mascara(this)" value="(">
-            <br><br>
-        </div>
+        <form>
+            <input type="text" oninput="mascaraTelefone(this)" value="(" id="phone" pattern="\(\d{2}\)\d{5}-\d{4}">
+            <br /><br /><br /><br />
 
-        <div id="calc">
+            <input type="submit" onclick="notificar()">
 
-        </div>
+        </form>
 
     </div>
 </body>

@@ -5,21 +5,21 @@ Funções
 */
 var calc = "#calc";
 
-// Função que recebe o valor da quantidade, o operador como argumento do botão, calcula o resultado da soma/subtração e, no fim, define o resultado como valor do input
+// Função que é chamada pelo botão, eu só gosto de fazer assim Thaís, desculpa.
 function Calculate() {
     debugger
     var select = document.getElementById('periodo');
-    var periodo = select.options[select.selectedIndex].value;
+    var periodo = select.options[select.selectedIndex].value; // coisinha pra pegar valor da opção
 
-    var quantidade = Number(document.getElementById('quantidade').value);
+    var quantidade = Number(document.getElementById('quantidade').value); // quantidade de passageiros
 
-    var preço = Calc(quantidade, periodo);
+    var preço = Calc(quantidade, periodo); // receita do mano
     document.getElementById("calc").innerHTML = `<br /> Com essa quantidade de passageiros, a receita da viagem será de ${preço} reais no total.`;
 };
 
-/* Função que soma ou subtrai do valor que tá no input e retorna o resultado dessa operação */
+/* Função que calcula a receita da pessoa baseada na quantidade de pessoas (x) e no período selecionado (t) */
 function Calc(x, t) {
-    debugger
+    debugger 
     var result;
     if (t == "diurno") {
         if (x > 50) {

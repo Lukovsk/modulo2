@@ -3,22 +3,17 @@
 Funções
 ======================= 
 */
-
-function mascara(i) {
-
-
-    var v = i.value;
-
-    // if (isNaN(v[v.length - 1])) { // impede entrar outro caractere que não seja número
-    //     i.value = v.substring(0, v.length - 1);
-    //     return;
-    // }
-
+// Função que facilita a escrita (máscara de input)
+function mascaraTelefone(i) {
     i.setAttribute("maxlength", "14");
-    if (v.length == 3) {
-        i.value += ") ";
+    if ((i.value).length == 3) {
+        i.value += ")";
     };
-    if (v.length == 9) {
+    if ((i.value).length == 9) {
         i.value += "-";
     }
+}
+// Função que notifica/parabeniza por escrever certo uai
+function notificar() {
+    alert("Pronto, entraremos em contato nesse telefone em breve!")
 }
