@@ -28,8 +28,9 @@ function Calculate() {
     var maiorNotaTrabalho = 0; // para saber o valor da maior nota dos trabalhos
     var alunoMaiorNotaProva = 0; // para saber quem tirou a maior nota nas provas
     var alunoMaiorNotaTrabalho = 0; // para saber quem tirou a maior nota nos trabalhos
-    var menorNotaProva = 0; // para saber o valor da menor nota das provas
-    var menorNotaTrabalho = 0; // para saber o valor da menor nota dos trabalhos
+    // Essas linhas abaixo podem representar um crime mas dá certo, se eu definir como "0", as notas das provas sempre serão maiores que essas variáveis (pois são positivas). Nesse sentido, eu precisaria definir os "menorNotaProva" como 10, mas isso limitaria ao código compreender notas de 0 a 10. Assim, queria muito que fossem de valor infinito e, segundo Internet, 1/0 = infinito. Logo, esses crimes são justificáveis, pode assim?
+    var menorNotaProva = 1 / 0; // para saber o valor da menor nota das provas
+    var menorNotaTrabalho = 1 / 0; // para saber o valor da menor nota dos trabalhos
     var alunoMenorNotaProva = 0; // para saber quem tirou a menor nota nas provas
     var alunoMenorNotaTrabalho = 0; // para saber quem tirou a menor nota nos trabalhos
 
@@ -45,8 +46,8 @@ function Calculate() {
         numeradorMediaTrabalhos += trabalho; // para a média dos trabalhos
 
         // para os esquemas de descobrir quais são as maiores e menores notas
-        if (maiorNotaProva < prova) { 
-            maiorNotaProva = prova; 
+        if (maiorNotaProva < prova) {
+            maiorNotaProva = prova;
             alunoMaiorNotaProva = k + 1;
         };
         if (maiorNotaTrabalho < trabalho) {
@@ -69,7 +70,7 @@ function Calculate() {
     }
 
     // média geral (considerando todos os alunos)
-    mediaGeral = numeradorMedia / (k + 1); 
+    mediaGeral = numeradorMedia / (k + 1);
     document.getElementById("outrasMédias").innerHTML += `<br /> A média geral da turma foi ${mediaGeral}.`;
 
     // a média artiméticas das notas de prova;
