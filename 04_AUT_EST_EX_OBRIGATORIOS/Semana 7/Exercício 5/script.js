@@ -20,7 +20,7 @@ function CriarAlunos() {
 function Calculate() {
     debugger
     // média de cada aluno:
-    let k = 0; // para o array
+    let k = 0; // para o while
     var numeradorMedia = 0; // para fazer a média geral depois
     var numeradorMediaProvas = 0; // para fazer a média das provas depois
     var numeradorMediaTrabalhos = 0; // para fazer a média dos trabalhos depois 
@@ -28,9 +28,16 @@ function Calculate() {
     var maiorNotaTrabalho = 0; // para saber o valor da maior nota dos trabalhos
     var alunoMaiorNotaProva = 0; // para saber quem tirou a maior nota nas provas
     var alunoMaiorNotaTrabalho = 0; // para saber quem tirou a maior nota nos trabalhos
+
+
+    // NÃO QUERO APAGAR ESSES COMENTÁRIOS PQ DIVIDIR POR 0 É MUITO LEGAL
     // Essas linhas abaixo podem representar um crime mas dá certo, se eu definir como "0", as notas das provas sempre serão maiores que essas variáveis (pois são positivas). Nesse sentido, eu precisaria definir os "menorNotaProva" como 10, mas isso limitaria ao código compreender notas de 0 a 10. Assim, queria muito que fossem de valor infinito e, segundo Internet, 1/0 = infinito. Logo, esses crimes são justificáveis, pode assim?
-    var menorNotaProva = 1 / 0; // para saber o valor da menor nota das provas
-    var menorNotaTrabalho = 1 / 0; // para saber o valor da menor nota dos trabalhos
+    // var menorNotaProva = 1 / 0; // para saber o valor da menor nota das provas
+    // var menorNotaTrabalho = 1 / 0; // para saber o valor da menor nota dos trabalhos
+
+    
+    var menorNotaProva = 101; // para saber o valor da menor nota das provas, isso só dá certo se as notas forem até 100
+    var menorNotaTrabalho = 101; // idem
     var alunoMenorNotaProva = 0; // para saber quem tirou a menor nota nas provas
     var alunoMenorNotaTrabalho = 0; // para saber quem tirou a menor nota nos trabalhos
 

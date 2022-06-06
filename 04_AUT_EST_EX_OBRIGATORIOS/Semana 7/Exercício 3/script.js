@@ -15,5 +15,10 @@ function mascaraTelefone(i) {
 }
 // Função que notifica/parabeniza por escrever certo uai
 function notificar() {
-    alert("Pronto, entraremos em contato nesse telefone em breve!")
-}
+    inpute = document.getElementById("phone").value
+    if (inpute.includes("(") && inpute.includes(")") && inpute.includes("-")) {
+        alert("Pronto, entraremos em contato nesse telefone em breve!")
+    } else {
+        alert("Hmm, parece que o formato do telefone informado não está correto")
+    };
+} 

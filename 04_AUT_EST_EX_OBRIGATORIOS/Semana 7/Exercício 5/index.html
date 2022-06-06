@@ -22,7 +22,9 @@ a média geral, considerando todos os alunos;
 a média artiméticas das notas de prova;
 a média artiméticas das notas de trabalho;
 a menor e a maior notas de prova;
-a menor e a maior notas de trabalho. Obs: note que a quantidade de campos para inserção das notas de cada aluno depende da quantidade de alunos informada. -->
+a menor e a maior notas de trabalho.
+Obs: note que a quantidade de campos para inserção das notas de cada aluno depende da quantidade de alunos informada.
+Obs.2: o máximo de nota é 1000 e ela não pode ser negativa -->
 
 <body>
     <script src="script.js"></script>
@@ -30,9 +32,10 @@ a menor e a maior notas de trabalho. Obs: note que a quantidade de campos para i
         <h1>Exercício 5</h1>
         <h2>Digite a quantidade de alunos e depois preencha as notas deles</h2>
         <br />
+
         <div>
 
-            <input type="number" id="quantidadeAlunos">
+            <input type="number" id="quantidadeAlunos" pattern="\[0-9]{3}" max="100" min="0">
             <button onclick="CriarAlunos()" class="button-calc"> Mostrar alunos </button>
 
         </div>
