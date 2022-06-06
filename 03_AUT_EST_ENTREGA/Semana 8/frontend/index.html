@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Meta tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="urf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Título do website-->
+    <title>Meu Currículo</title>
+
+    <!--CSS próprio meu-->
+    <link href="estilo.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body id="menu">
+    <script src="script.js"></script>
+
+    <div class="container" style="padding-top: 100px;">
+        <div class="row">
+            <!-- Coluna 1 (com as imagenzinhas) -->
+            <div class="col-sm-3" id="backgroundLeft">
+                <center>
+                    <img src="imgs/Imagem do pinguim.png" onclick="criar('❤')">
+
+
+                    <img src="imgs/Imagem da Barrinha.png" style="padding-top: 150px;">
+                    <h2 class="Ocupação"><strong> SOBRE </strong></h2>
+
+
+                    <img src="imgs/Imagem da Barrinha.png" style="padding-top: 113px">
+                    <h2 class="Ocupação"><strong> EDUCAÇÃO </strong></h2>
+
+
+                    <img src="imgs/Imagem da Barrinha.png" style="padding-top: 393px">
+                    <h2 class="Ocupação"><strong> EXPERIÊNCIA </strong></h2>
+
+
+                    <img src="imgs/Imagem da Barrinha.png" style="padding-top: 400px;">
+                    <h2 class="Ocupação"><strong> HABILIDADES </strong></h2>
+                </center>
+            </div>
+
+            <!-- Coluna 2 (com as informaçõeszinhas) -->
+            <div class="col-sm-9" id="backgroundBody">
+                <!-- Cabeçário -->
+                <div>
+                    <p class="Nome"><strong> LUCAS HENRIQUE</strong></p>
+                    <div id="kokoro" style="font-size:400%"></div> <!-- div que vai receber os corações -->
+                    <p class="Nome"><strong> SALES DE SOUZA </strong></p>
+                    <h3 class="Ocupação"><strong> E S T U D A N T E | E S T A G I Á R I O </strong></h3>
+                    <h5 class="w"> <a link="">(12) 99158-2626</a> | <a link="">lucas-henriquesales@hotmail.com</a></h5>
+                </div>
+
+                <hr>
+
+                <h5 class="w" style="padding-top: 10px; padding-bottom: 10px">Estudante de Engenharia da Computação no
+                    INTELI, Instituto de
+                    Tecnologia e Liderança.
+                    Tenho muito interesse nas áreas relacionadas à educação, tanto em pesquisas acadêmicas, quanto
+                    em monitorias de matemática e física.</h5>
+
+                <hr>
+
+                <h5 class="w" style="padding-top: 10px"><strong>Ensino Médio com bolsa em colégio de prestígio</strong>
+                </h5>
+                <h6 class="w">Colégio Poliedro</h6>
+                <h6 class="w">janeiro de 2019 - dezembro de 2020</h6>
+
+                <h5 class="w" style="padding-top: 20px"><strong>Turma ITA - curso para colégios militares de
+                        engenharia</strong></h5>
+                <h6 class="w">Cursos Poliedro</h6>
+                <h6 class="w" style="padding-bottom: 10px">janeiro de 2021 - janeiro de 2022</h6>
+
+                <div id="adicionarInteli">
+                    <input type="text" class="input" name="adicionarExperiência" id="adicionarExperiência" size="40"
+                        placeholder="adicionar Formação acadêmica" value="Engenharia da Computação">
+                    <input type="text" class="input" name="adicionarInstituição" id="adicionarInstituição" size="40"
+                        placeholder="instituição Acadêmica" value="INTELI">
+                    <input type="text" class="input" name="adicionarTempo" id="adicionarTempo" size="40"
+                        placeholder="período" value="janeiro de 2022 - dezembro de 2025">
+                    <br />
+                    <button onclick="registrarFormacaoAcademica()" style="background-color:blue">Adicionar Experiência
+                        acadêmica</button>
+
+                </div>
+                <hr>
+
+                <h5 class="w" style="padding-top: 10px"><strong>Participação em Olimpíadas Científicas e
+                        Acadêmicas</strong></h5>
+                <ul class="w">
+                    <li>Medalha de bronze no Torneio Virtual de Química (em grupo)</li>
+                    <li>Medalha de cristal na Olimpíada Brasileira em História do Brasil (em grupo)</li>
+                    <li>Desafio Nacional Acadêmico (em grupo)</li>
+                    <li>Medalhas em olimpíadas de Matemáica, Física, Robótica e Astronomia</li>
+                </ul>
+
+                <h5 class="w" style="padding-top: 20px"><strong>Fiscal de Prova Voluntário</strong></h5>
+                <h6 class="w">Curso Alberto Santos Dummont (CASDinho)</h6>
+                <h6 class="w" style="padding-bottom: 10px">outubro - 2019</h6>
+
+
+                <hr />
+
+                <div class="row" style="padding-top: 10px">
+                    <div class="col-sm-3">
+                        <img class="habilidades" src="imgs/Imagem de comunicação em grupo.png">
+                        <center>
+                            <p class="rodapé">Comunicação em grupo</p>
+                        </center>
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="habilidades" src="imgs/Imagem de Rápida Digitação.png">
+                        <center>
+                            <p class="rodapé">Rápida digitação</p>
+                        </center>
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="habilidades" src="imgs/Imagem de Pesquisas e computadores.png">
+                        <center>
+                            <p class="rodapé">Pesquisas e computadores</p>
+                        </center>
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="habilidades" src="imgs/Imagem de Concentração e Paciência.png">
+                        <p class="rodapé">Concentração e Paciência</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <h1> AJAX </h1>
+    </div>
+
+</body>
+
+</html>

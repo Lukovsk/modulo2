@@ -11,12 +11,6 @@ function registrarFormacaoAcademica() {
 }
 
 
-function adicionarFormacaoAcademica(Experiencia, Instituicao, Periodo) {
-    alert();
-    document.getElementById(adicionarFormacaoAcademica).innerHTML = `
-    <h5 class="w" style="padding-top: 20px"><strong>${Experiencia}</strong></h5>
-    <h6 class="w">${Instituicao}</h6>
-    <h6 class="w" style="padding-bottom: 10px">${Periodo}</h6>`;
 }
 
 // Função que cria um coração no meu nome

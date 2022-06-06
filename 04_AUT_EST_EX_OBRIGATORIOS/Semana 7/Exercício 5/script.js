@@ -35,7 +35,7 @@ function Calculate() {
     // var menorNotaProva = 1 / 0; // para saber o valor da menor nota das provas
     // var menorNotaTrabalho = 1 / 0; // para saber o valor da menor nota dos trabalhos
 
-    
+
     var menorNotaProva = 101; // para saber o valor da menor nota das provas, isso só dá certo se as notas forem até 100
     var menorNotaTrabalho = 101; // idem
     var alunoMenorNotaProva = 0; // para saber quem tirou a menor nota nas provas

@@ -13,7 +13,6 @@ function Calculate() {
 
     var quantidade = Number(document.getElementById('quantidade').value); // quantidade de passageiros
 
-    
     var preço = Calc(quantidade, periodo); // receita do mano
     document.getElementById("calc").innerHTML = `<br /> Com essa quantidade de passageiros, a receita da viagem será de ${preço} reais no total.`;
 };
