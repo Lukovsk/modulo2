@@ -6,8 +6,6 @@ Funções
 
 // Função que é chamada pelo botão e pega a centena do valor a partir de uma divisão por 100 e seu valor piso. Depois ela diz se esse valor é par ou ímpar
 function Calculate() {
-    debugger
-
     valor = document.getElementById('valor').value;
 
     var centena = Math.floor(valor / 100);
