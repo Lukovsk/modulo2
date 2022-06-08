@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
 
     <!-- Título -->
-    <title>Exercício 2</title>
+    <title>Exercício 3</title>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
@@ -16,24 +16,26 @@
 </head>
 
 <!-- Enunciado -->
-<!-- Crie uma página web na qual o usuário informe um número inteiro positivo e quando o usuário indicar que deseja que o cálculo seja realizado (pressionar um botão), seja exibida a soma de seus dígitos. -->
+<!-- Crie uma página web na qual o usuário informe três nomes e quando o usuário indicar que deseja que o cálculo seja realizado (pressionar um botão), os nomes são exibidos em ordem alfabética crescente. -->
 
 <body>
     <script src="script.js"></script>
     <div id="main">
-        <h1>Exercício 2</h1>
-        <h2>Informe um número e aperte para saber a soma dos algarismos do seu número:</h2>
+        <h1>Exercício 3</h1>
+        <h2>Informe três nomes:</h2>
         <br />
         <div>
 
-            <input type="number" id="valor" oninput="Calculate()">
+            <input type="text" id="nome1">
+            <input type="text" id="nome2">
+            <input type="text" id="nome3">
 
             <br><br>
 
         </div>
 
         <div>
-            <button onclick="Calculate()" class="button-calc"> Calcular </button>
+            <button onclick="Ordenate()" class="button-calc"> Ordenar </button>
         </div>
 
         <div id="calc">

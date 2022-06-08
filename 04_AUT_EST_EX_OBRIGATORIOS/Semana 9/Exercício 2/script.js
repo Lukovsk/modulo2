@@ -4,7 +4,7 @@ Funções
 ======================= 
 */
 
-// Função que é chamada pelo botão e pega a centena do valor a partir de uma divisão por 100 e seu valor piso. Depois ela diz se esse valor é par ou ímpar
+// Função que é chamada pelo botão e ao digitar no input, pega o valor do input, separa ele em array e soma os elementos
 function Calculate() {
     valor = String(document.getElementById('valor').value);
     // objetivo: formar uma lista com cada algarismo do valor e depois somar cada item da lista
@@ -15,7 +15,7 @@ function Calculate() {
     var resultado = 0;
     while (i < lista.length) {
         resultado += Number(lista[i]);
-        console.log(resultado + " and " + lista[i])
+        // console.log(resultado + " and " + lista[i])
         i++
     };
 
