@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+
+    <!-- Título -->
+    <title>Exercício 4</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<!-- Enunciado -->
+<!-- A série de Fibonacci é formada pela sequência 1, 1, 2, 3, 5, 8, 13, 21, 34, ... Escreva um programa que apresente a série de Fibonacci até o n-ésimo termo (n > 0). -->
+
+<body>
+    <script src="script.js"></script>
+    <div id="main">
+        <h1>Exercício 4</h1>
+        <h2>Digite um valor maior que 0 e receba a série de Fibonacci:</h2>
+        <br />
+        <div>
+
+            <input type="number" id="valor" min="0" oninput="Calculate()">
+
+            <br><br>
+
+        </div>
+
+        <div>
+            <button onclick="Calculate()" class="button-calc"> Calculate </button>
+        </div>
+
+        <div id="calc">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
