@@ -25,53 +25,27 @@ function Calculate() {
         min++
     }
     var intervaloCompleto = extremos;
-    // console.log(extremos);
-    // pronto, agora temos uma lista ordenada do n1 até o n2
-    // precisamos encontrar os números primos agora
-    /* var i = 0;
-    var primo;
-    while (intervaloCompleto[i] < max) {
-        var divisores = 2;
-        console.log(`número testado agora é o ${intervaloCompleto[i]}`)
-        while (divisores < intervaloCompleto[i]) {
-            if (intervaloCompleto[i] % divisores == 0) {
-                primo = false;
-                console.log(primo)
-            } else {
+
+    var listaPrimos = [];
+
+    var primo = false;
+    for (var i = 0; i < max; i++) { // para cada número menor que o valor máximo da lista, faz o seguinte:
+        // verifica se é primo
+        for (var divisor = 2; divisor < intervaloCompleto[i]; divisor++) { // para verificar se é primo, veja se o resto da divisão do número verificado "intervaloCompleto[i]" e todos os divisores MENORES do que esse número
+            if (intervaloCompleto[i] % divisor != 0) { // se esse resto for diferente de zero, então o "invervaloCompleto[i] e o divisor verificado são primos entre si
                 primo = true;
-                console.log(primo)
-            };
-            if (primo == true) {
-                listaPrimos.push(intervaloCompleto[i]);
-                console.log(`lista de primos: ${listaPrimos}`);
-            };
-            divisores++
+            }
+            if (intervaloCompleto[i] % divisor == 0) { // porém, se a de cima for falsa, eles não são primos entre si e, portanto, o "intervaloCompleto[i]" NÃO É PRIMO, portanto, vamos parar esse segundo "for" aqui e verificar um novo número do intervalo
+                primo = false; // define falso pra caso em algum momento der true ele já tirar
+                divisor = intervaloCompleto[i]; // isso faz com que esse for acabe já que negativa a condição dele
+            }
         }
+        if (primo == true) { // se no final desse "for" ele passar pelo primeiro if todas as vezes, então o número é primo, se for, printa:
+            console.log(intervaloCompleto[i])
+            listaPrimos.push(intervaloCompleto[i])
+        }
+    }
 
-        i++
-    } */
 
-    // var listaPrimos = [];
-    // debugger
-    // for (let i = 0; i < Number(intervaloCompleto.length - 1); i++) {
-
-    //     for (let divisor = 2; divisor < intervaloCompleto[i]; divisor++) {
-    //         if (!(intervaloCompleto[i] % divisor == 0)) {
-    //             listaPrimos.push(intervaloCompleto[i]);
-    //         };
-    //     };
-
-    // };
-    // console.log(listaPrimos)
-
-    // function primeNumber(num) {
-    //     for (var divisor = 2; divisor < num; divisor++)
-    //         if (num % divisor == 0) return false;
-    //     return true;
-    // }
-
-    // var determinadoNumero = max;
-
-    // for (var i = 2; i < determinadoNumero; i++) if (primeNumber(i)) console.log(i);
 
 };
