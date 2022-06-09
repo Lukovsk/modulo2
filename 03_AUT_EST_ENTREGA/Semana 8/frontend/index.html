@@ -78,19 +78,22 @@
                         engenharia</strong></h5>
                 <h6 class="w">Cursos Poliedro</h6>
                 <h6 class="w" style="padding-bottom: 10px">janeiro de 2021 - janeiro de 2022</h6>
+                <form action="/insertAcademico">
+                    <div id="adicionarInteli">
+                        <input type="text" class="input" name="Curso" id="adicionarExperiência" size="60"
+                            placeholder="adicionar Formação acadêmica" value="Engenharia da Computação">
+                        <input type="text" class="input" name="Lugar" id="adicionarInstituição" size="60"
+                            placeholder="instituição Acadêmica" value="INTELI">
+                        <input type="text" class="input" name="Inicio" id="adicionarInicio" size="24"
+                            placeholder="Início" value="janeiro de 2022 -"> <input type="text" class="input" name="Fim"
+                            id="adicionarFim" size="30" placeholder="Fim" value="dezembro de 2025">
+                        <br />
+                        <button onclick="registrarFormacaoAcademica()" style="background-color:blue">Adicionar
+                            Experiência
+                            acadêmica</button>
 
-                <div id="adicionarInteli">
-                    <input type="text" class="input" name="adicionarExperiência" id="adicionarExperiência" size="40"
-                        placeholder="adicionar Formação acadêmica" value="Engenharia da Computação">
-                    <input type="text" class="input" name="adicionarInstituição" id="adicionarInstituição" size="40"
-                        placeholder="instituição Acadêmica" value="INTELI">
-                    <input type="text" class="input" name="adicionarTempo" id="adicionarTempo" size="40"
-                        placeholder="período" value="janeiro de 2022 - dezembro de 2025">
-                    <br />
-                    <button onclick="registrarFormacaoAcademica()" style="background-color:blue">Adicionar Experiência
-                        acadêmica</button>
-
-                </div>
+                    </div>
+                </form>
                 <hr>
 
                 <h5 class="w" style="padding-top: 10px"><strong>Participação em Olimpíadas Científicas e
