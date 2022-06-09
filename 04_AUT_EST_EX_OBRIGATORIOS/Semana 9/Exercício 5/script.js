@@ -46,6 +46,12 @@ function Calculate() {
         }
     }
 
-
+    var tx = '';
+    var j = 0;
+    while (j < listaPrimos.length) {
+        tx += `<p  class="listaBox"> ${listaPrimos[j]} </p>`;
+        j++
+    }
+    document.getElementById('calc').innerHTML = tx;
 
 };
