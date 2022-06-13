@@ -47,3 +47,12 @@ Um exercício sobre lançamento vertical para descobrir a altura máxima e o tem
     <li> vários if's para calcular a receita de uma venda de bilhetes de avião com condições e</li>
     <li> criação de uma quantidade de alunos e o cálculo de suas médias. </li>
 </ul>
+
+<a href="https://github.com/Lukovsk/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%209"> 10/06/2022 - Semana 9 </a> <br />
+<ul> Cinco exercícios de javascript que envolvem:
+    <li> dizer a paridade da centena de um valor de 3 dígitos; </li>
+    <li> somar todos os algarismos de um valor; </li>
+    <li> ordenar três nomes em ordem alfabética; </li>
+    <li> mostrar a sequência de fibonnacci até determinado valor e</li>
+    <li> dizer quais números são primos em um dado intervalo qualquer. </li>
+</ul>
