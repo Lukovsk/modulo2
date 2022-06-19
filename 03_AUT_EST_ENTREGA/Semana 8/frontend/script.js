@@ -142,17 +142,11 @@ var academicos = {
             type: 'GET',
             success: data => {
                 var text = '';
-                text += '<div class="insert" onclik="academico.insert()"> INSERIR </div>';
                 data.forEach(element => {
-                    text += '<div class="user">';
-                    text += `<div class="title"> ${element.Curso} | ${element.Lugar} | ${element.Inicio} | ${element.Fim} | ${element.Status} | ${element.Love} </div>`
-                    text += '<div class="actions">';
-                    text += `<div class="action" onclick="academico.update('${element.Curso}','${element.Status}')"> EDITAR </div>`;
+                    text += `<h5 class="w" style="padding-top: 10px"> <strong> ${element.Curso} </strong> </h5>`;
+                    text += `<h6 class="w"> ${element.Lugar} </h6>`;
+                    text += `<h6 class="w"> ${element.Inicio} - ${element.Fim} </h6>`;
 
-                    // text += '<div class="action" onclick="user.update(' + element.id + ',\'' + element.title + '\')"> EDITAR </div>';
-                    text += '<div class="action" onclick="academico.delete(' + element.Curso + ')"> EXCLUIR </div>';
-                    text += '</div>';
-                    text += '</div>';
                 });
                 $('#adicionarInteli').html(text);
             }
@@ -163,37 +157,6 @@ var academicos = {
 };
 
 var academico = {
-
-    insert() {
-        var Curso = prompt('Digite o Curso:');
-        var Lugar = prompt('Digite o Lugar:');
-        var Inicio = prompt('Digite o Inicio:');
-        var Fim = prompt('Digite o Fim:');
-        var Amor = prompt('Digite o amor:');
-        var Status = prompt('Digite o Status:');
-        if (Curso) {
-            if (Curso.trim() != '') {
-                $.ajax({
-                    type: 'POST',
-                    url: api + '/insertAcademico',
-                    data: {
-                        Curso: Curso,
-                        Lugar: Lugar,
-                        Inicio: Inicio,
-                        Fim: Fim,
-                        Amor: Amor,
-                        Status: Status
-                    },
-                }).done(function () {
-                    academicos.list();
-                }).fail(function (msg) {
-                    console.log('FAIL');
-                }).always(function (msg) {
-                    console.log('ALWAYS');
-                });
-            }
-        }
-    },
 
     update(id, oldStatus) {
         var Status = prompt('Digite o novo status do curso:', oldStatus);
@@ -212,24 +175,7 @@ var academico = {
                 });
             }
         }
-    },
-
-    delete(Curso) {
-
-        if (confirm('Confirma a exclusão?')) {
-            $.ajax({
-                type: 'POST',
-                url: api + '/deleteAcademico',
-                data: { Curso: Curso },
-            }).done(function () {
-                Academicos.list();
-            }).fail(function (msg) {
-                console.log('FAIL');
-            }).always(function (msg) {
-                console.log('ALWAYS');
-            });
-        }
-    },
+    }
 
 }
 
@@ -248,8 +194,6 @@ function registrarFormacaoAcademica() {
 
 function addFormacaoAcademica(Experiencia, Instituicao, Periodo) {
     document.getElementById(adicionarFormacaoAcademica).innerHTML = `<h5 class="w" style="padding-top: 20px"><strong>${Experiencia}</strong></h5><h6 class="w">${Instituicao}</h6><h6 class="w" style="padding-bottom: 10px">${Periodo}</h6>`;
-
-    // $(adicionarFormacaoAcademica).append(`<h5 class="w" style="padding-top: 20px"><strong>${Experiencia}</strong></h5><h6 class="w">${Instituicao}</h6><h6 class="w" style="padding-bottom: 10px">${Periodo}</h6>`);
 
 }
 
