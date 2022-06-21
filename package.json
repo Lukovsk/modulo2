@@ -1,9 +1,9 @@
 {
   "name": "m2",
   "version": "0.0.1",
-  "description": "This example is so cool.",
+  "description": "Meu currículo s2s2",
   "scripts": {
-    "start": "node app_71.js"
+    "start": "node app_cv.js"
   },
   "keywords": [
     "example",

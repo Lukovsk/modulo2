@@ -11,12 +11,12 @@ const port = 2332;
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use(express.static("../frontend/"));
+app.use(express.static("03_AUT_EST_ENTREGA/Semana 8/frontend/"));
 
 app.use(express.json());
 
 // Caminho do banco de dados
-const DBPATH = 'cv.db';
+const DBPATH = '03_AUT_EST_ENTREGA/Semana 8/backend/cv.db';
 
 const { urlencoded } = require('express');
 
@@ -158,6 +158,6 @@ app.post('/deleteAcademico', (req, res) => {
 
 
 
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server running`);
 });
