@@ -11,7 +11,7 @@ const port = 2332;
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use(express.static("03_AUT_EST_ENTREGA/Semana 8/frontend/"));
+app.use(express.static("03_AUT_EST_ENTREGA/Semana 6/frontend/"));
 
 app.use(express.json());
 
