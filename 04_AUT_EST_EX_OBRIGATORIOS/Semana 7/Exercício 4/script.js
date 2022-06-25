@@ -19,21 +19,21 @@ function Calculate() {
 
 /* Função que calcula a receita da pessoa baseada na quantidade de pessoas (x) e no período selecionado (t) */
 function Calc(x, t) {
-    debugger 
+    debugger
     var result;
-    if (t == "diurno") {
-        if (x > 50) {
-            result = 200 * x * 0.6;
-        } else {
-            result = 200 * x;
+    if (t == "diurno") { // se o período for exatamente igual a "diurno" que está lá na opção do select
+        if (x > 50) { // se a quantidade de pessoas for maior que 50
+            result = 200 * x * 0.6; // o resultado retorna com desconto de 40%
+        } else { // se for menor ou igual a 50
+            result = 200 * x; // o valor é íntegro
         };
     };
 
-    if (t == "noturno") {
-        if (x > 50) {
-            result = 100 * x * 0.8;
-        } else {
-            result = 100 * x;
+    if (t == "noturno") { // se o período for exatamente giual a "noturno" que está lá na opção do select
+        if (x > 50) { // se a quantidade de pessoas supera 50
+            result = 100 * x * 0.8; // o valor retorna com desconto de 20%
+        } else { // se for inferior ou igual a 50
+            result = 100 * x; // o valor retorna íntegro
         };
     };
 
