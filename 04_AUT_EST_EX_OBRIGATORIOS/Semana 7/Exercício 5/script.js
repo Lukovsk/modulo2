@@ -21,7 +21,7 @@ function Calculate() {
     debugger
     // média de cada aluno:
     let k = 0; // para o while
-    var numeradorMedia = 0; // para fazer a média geral depois
+    var numeradorMediaGeral = 0; // para fazer a média geral depois
     var numeradorMediaProvas = 0; // para fazer a média das provas depois
     var numeradorMediaTrabalhos = 0; // para fazer a média dos trabalhos depois 
     var maiorNotaProva = 0; // para saber o valor da maior nota das provas
@@ -47,8 +47,8 @@ function Calculate() {
         idnotaTrabalho = String("notaTrabalho" + String(k + 1)); // idem
         trabalho = Number(document.getElementById(idnotaTrabalho).value); // idem para trabalho
 
-        media = ((2 * prova + 3 * trabalho) / 5); // média de cada aluno
-        numeradorMedia += media; // para a média geral
+        media = (((2 * prova) + (3 * trabalho)) / 5); // média de cada aluno
+        numeradorMediaGeral += media; // para a média geral
         numeradorMediaProvas += prova; // para a média das provas
         numeradorMediaTrabalhos += trabalho; // para a média dos trabalhos
 
@@ -77,17 +77,17 @@ function Calculate() {
     }
 
     // média geral (considerando todos os alunos)
-    mediaGeral = numeradorMedia / (k + 1);
+    mediaGeral = numeradorMediaGeral / (quantidadeAlunos);
     document.getElementById("outrasMédias").innerHTML += `<br /> A média geral da turma foi ${mediaGeral}.`;
 
     // a média artiméticas das notas de prova;
     // a menor e a maior notas de prova.
-    mediaProvas = numeradorMediaProvas / (k + 1);
+    mediaProvas = numeradorMediaProvas / (quantidadeAlunos);
     document.getElementById("outrasMédias").innerHTML += `<br /> A média das notas das provas foi ${mediaProvas}, onde a maior nota foi ${maiorNotaProva} do aluno ${alunoMaiorNotaProva} e a menor nota foi ${menorNotaProva} do aluno ${alunoMenorNotaProva}.`;
 
     // a média artiméticas das notas de trabalho;
     // a menor e a maior notas de trabalho.
-    mediaTrabalho = numeradorMediaTrabalhos / (k + 1);
+    mediaTrabalho = numeradorMediaTrabalhos / (quantidadeAlunos);
     document.getElementById("outrasMédias").innerHTML += `<br /> A média das notas dos trabalhos foi ${mediaTrabalho}, onde a maior nota foi ${maiorNotaTrabalho} do aluno ${alunoMaiorNotaTrabalho} e a menor nota foi ${menorNotaTrabalho} do aluno ${alunoMenorNotaTrabalho}.`;
 
 };
