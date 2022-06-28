@@ -1,16 +1,17 @@
 // Código do Servidor
 
-// importa bibliote cas necessárias
+// importa bibliotecas necessárias
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
-
-// cira servidor no endereço local e determina que a pasta frontend deve ser usada com source
-const app = express();
-const hostname = '127.0.0.1';
-const port = 2332;
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+// cira servidor no endereço local e determina que a pasta frontend deve ser usada com source
+const hostname = '127.0.0.1';
+const port = 2332;
+const app = express();
+
+/* Diretório da aplicação do servidor */
 app.use(express.static("../frontend/"));
 
 app.use(express.json());
@@ -18,7 +19,6 @@ app.use(express.json());
 // Caminho do banco de dados
 const DBPATH = 'cv.db';
 
-const { urlencoded } = require('express');
 
 
 /* Definição dos endpoints */
@@ -26,7 +26,7 @@ const { urlencoded } = require('express');
 /****** CRUD ******************************************************************/
 
 // Retorna todos registros (é o R do CRUD - Read)
-app.get('/users', (req, res) => {
+app.get('/users', urlencodedParser, (req, res) => {
     res.statusCode = 200;
     res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
@@ -42,7 +42,7 @@ app.get('/users', (req, res) => {
 });
 
 // Criar um registro (é o C do CRUD - Create)
-app.post('/userinsert', (req, res) => {
+app.post('/userinsert', urlencodedParser, (req, res) => {
     res.statusCode = 200;
     res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
@@ -58,7 +58,7 @@ app.post('/userinsert', (req, res) => {
 });
 
 // Atualizar um registro (é o U do CRUD - Update)
-app.post('/userupdate', (req, res) => {
+app.post('/userupdate', urlencodedParser, (req, res) => {
     res.statusCode = 200;
     res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
